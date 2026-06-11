@@ -1,0 +1,51 @@
+/* ============================================================
+   variables.css
+   PURPOSE : Defines all CSS custom properties (variables) used
+             across every other CSS module. Change a value here
+             and it updates the entire website automatically.
+   ============================================================ */
+
+:root {
+
+  /* ── COLOR PALETTE ─────────────────────────────────────── */
+
+  /* Main background — very dark, near-black */
+  --bg: #0d0d0d;
+
+  /* Surface color — slightly lighter dark, used on alternate sections */
+  --surface: #161616;
+
+  /* Border/divider color — subtle dark line */
+  --border: #2a2a2a;
+
+  /* Primary accent — warm gold. Used for highlights, icons, hover states */
+  --accent: #c9a84c;
+
+  /* Light accent — softer gold. Used for subtitle text */
+  --accent2: #e8d5a3;
+
+  /* Main text color — warm off-white (easier on eyes than pure white) */
+  --text: #f0ece4;
+
+  /* Muted text — used for descriptions, labels, secondary info */
+  --muted: #888888;
+
+
+  /* ── TYPOGRAPHY ─────────────────────────────────────────── */
+
+  /* Display / heading font — serif, elegant, used for big titles */
+  --font-head: 'Playfair Display', serif;
+
+  /* Body font — clean sans-serif, used for paragraphs and UI text */
+  --font-body: 'DM Sans', sans-serif;
+
+
+  /* ── SPACING ────────────────────────────────────────────── */
+
+  /* Horizontal padding for all sections — keeps content away from edges */
+  --section-px: 6%;
+
+  /* Vertical padding top/bottom for all sections */
+  --section-py: 6rem;
+
+}
