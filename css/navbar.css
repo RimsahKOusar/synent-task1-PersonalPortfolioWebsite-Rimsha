@@ -1,0 +1,80 @@
+/* ============================================================
+   navbar.css
+   PURPOSE : Styles for the fixed top navigation bar.
+             The nav stays visible at all times as the user
+             scrolls down the page.
+   ============================================================ */
+
+
+/* ── NAV CONTAINER ──────────────────────────────────────────
+   position: fixed keeps the nav pinned to the top of the
+   viewport even when the page scrolls.
+   backdrop-filter: blur creates a "frosted glass" effect —
+   the page content blurs behind the semi-transparent nav.
+────────────────────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;                         /* sits above all other content */
+  display: flex;
+  justify-content: space-between;       /* logo on left, links on right */
+  align-items: center;
+  padding: 1.2rem var(--section-px);
+  background: rgba(13, 13, 13, 0.85);  /* 85% opaque dark background */
+  backdrop-filter: blur(10px);          /* frosted glass blur */
+  border-bottom: 1px solid var(--border);
+}
+
+
+/* ── LOGO ───────────────────────────────────────────────────
+   Displays your initials in the top-left corner in gold.
+   Uses the serif heading font for elegance.
+────────────────────────────────────────────────────────────── */
+.nav-logo {
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+
+/* ── NAV LINKS LIST ─────────────────────────────────────────
+   The <ul> containing navigation links. Displayed as a
+   horizontal row using flexbox.
+────────────────────────────────────────────────────────────── */
+.nav-links {
+  display: flex;
+  gap: 2rem;           /* space between each link */
+  list-style: none;    /* removes the default bullet points */
+}
+
+
+/* ── INDIVIDUAL NAV LINK ────────────────────────────────────
+   Links are muted by default and turn gold on hover.
+   transition ensures the color change animates smoothly.
+────────────────────────────────────────────────────────────── */
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+
+/* ── RESPONSIVE: MOBILE ─────────────────────────────────────
+   On screens smaller than 768px (phones/tablets), the nav
+   links are hidden. A hamburger menu would go here in
+   a more advanced version (Task 4 covers that!).
+────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
