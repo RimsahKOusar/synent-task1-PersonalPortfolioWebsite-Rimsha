@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/skills.css" />
 </head>
 <body>
     <!--
@@ -159,6 +160,122 @@
 
   </div>
   <!-- end .about-grid -->
+
+</section>
+
+<!--
+  sections/skills.html
+  PURPOSE : "Skills" section displaying a grid of skill cards.
+            Each card shows a skill name, short description,
+            and a progress bar indicating your proficiency level.
+  LINKED CSS : css/skills.css
+-->
+
+<!-- id="skills" is targeted by the nav link href="#skills" -->
+<section id="skills">
+
+  <!-- Small label above the heading -->
+  <span class="section-label">What I Know</span>
+
+  <!-- Section heading -->
+  <h2>My Skills</h2>
+
+  <!-- Gold divider line -->
+  <div class="divider"></div>
+
+  <!-- Short intro paragraph -->
+  <p class="skills-intro">
+    A snapshot of the technologies and tools I work with. I'm always
+    learning and adding new skills to my toolkit.
+  </p>
+
+
+  <!-- SKILLS GRID: Add or remove .skill-card blocks as needed -->
+  <div class="skills-grid">
+
+
+    <!-- ── SKILL CARD ──────────────────────────────────────────
+         To add a new skill: copy one card block and change:
+         1. The emoji icon
+         2. The <h3> skill name
+         3. The <p> description
+         4. The style="width: XX%" on .skill-fill
+         5. The skill-percent text
+    ──────────────────────────────────────────────────────── -->
+
+    <!-- Skill 1: HTML5 -->
+    <div class="skill-card">
+      <div class="skill-card-icon">🌐</div>
+      <h3>HTML5</h3>
+      <!-- ✏️ CHANGE: Short description of how you use this skill -->
+      <p>Structure &amp; Semantics</p>
+      <!-- Progress bar: style="width: XX%" sets the fill level (0–100) -->
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;"></div>
+      </div>
+      <!-- ✏️ CHANGE: Match this number to the width above -->
+      <span class="skill-percent">90%</span>
+    </div>
+
+    <!-- Skill 2: CSS3 -->
+    <div class="skill-card">
+      <div class="skill-card-icon">🎨</div>
+      <h3>CSS3</h3>
+      <p>Styling &amp; Layouts</p>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 80%;"></div>
+      </div>
+      <span class="skill-percent">80%</span>
+    </div>
+
+    <!-- Skill 3: JavaScript -->
+    <div class="skill-card">
+      <div class="skill-card-icon">⚡</div>
+      <h3>JavaScript</h3>
+      <p>Interactivity</p>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 60%;"></div>
+      </div>
+      <span class="skill-percent">60%</span>
+    </div>
+
+    <!-- Skill 4: Responsive Design -->
+    <div class="skill-card">
+      <div class="skill-card-icon">📱</div>
+      <h3>Responsive Design</h3>
+      <p>Mobile-first</p>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 75%;"></div>
+      </div>
+      <span class="skill-percent">75%</span>
+    </div>
+
+    <!-- Skill 5: Git & GitHub -->
+    <div class="skill-card">
+      <div class="skill-card-icon">🔧</div>
+      <h3>Git &amp; GitHub</h3>
+      <p>Version Control</p>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 65%;"></div>
+      </div>
+      <span class="skill-percent">65%</span>
+    </div>
+
+    <!-- Skill 6: VS Code -->
+    <div class="skill-card">
+      <div class="skill-card-icon">💡</div>
+      <h3>VS Code</h3>
+      <p>Development Tool</p>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 85%;"></div>
+      </div>
+      <span class="skill-percent">85%</span>
+    </div>
+
+    <!-- ✏️ Add more skill cards here if needed -->
+
+  </div>
+  <!-- end .skills-grid -->
 
 </section>
 
