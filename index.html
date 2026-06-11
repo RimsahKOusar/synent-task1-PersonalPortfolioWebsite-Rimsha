@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/about.css" />
 </head>
 <body>
     <!--
@@ -75,6 +76,89 @@
     </div>
 
   </div>
+
+</section>
+
+<!--
+  sections/about.html
+  PURPOSE : "About Me" section with a two-column layout.
+            Left column: avatar/photo placeholder.
+            Right column: heading, bio text, and quick stats.
+  LINKED CSS : css/about.css
+-->
+
+<!-- id="about" is targeted by the nav link href="#about" -->
+<section id="about">
+
+  <!-- Two-column grid: avatar on left, text on right -->
+  <div class="about-grid">
+
+
+    <!-- ── LEFT COLUMN: AVATAR / PHOTO ─────────────────────
+         Replace the .avatar-placeholder div with a real <img>
+         tag once you have your photo:
+         <img src="images/photo.jpg" alt="Your Name" style="width:100%; display:block;">
+    ──────────────────────────────────────────────────────── -->
+    <div class="about-avatar">
+      <div class="avatar-placeholder">
+        <!-- ✏️ CHANGE: Replace "YN" with your initials -->
+        <span class="avatar-initials">YN</span>
+        <span>Your Photo Here</span>
+      </div>
+    </div>
+
+
+    <!-- ── RIGHT COLUMN: TEXT CONTENT ──────────────────────── -->
+    <div class="about-text">
+
+      <!-- Small label above the heading -->
+      <span class="section-label">About Me</span>
+
+      <!-- Section heading — can be anything describing you -->
+      <h2>Crafting Digital<br>Experiences</h2>
+
+      <!-- Gold divider line (defined in base.css) -->
+      <div class="divider"></div>
+
+      <!-- ✏️ CHANGE: Replace with your own bio paragraphs -->
+      <p>
+        I'm a web development intern with a keen eye for design and a love
+        for clean code. I believe great websites start with thoughtful design
+        and purposeful code.
+      </p>
+      <p>
+        When I'm not coding, you'll find me exploring new design trends,
+        working on personal projects, or learning new technologies to
+        expand my skill set.
+      </p>
+
+      <!-- QUICK STATS: Three numbers that highlight your experience -->
+      <div class="about-stats">
+
+        <!-- ✏️ CHANGE: Update numbers to reflect your actual experience -->
+
+        <div class="stat-item">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-number">2+</span>
+          <span class="stat-label">Months Exp.</span>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Dedication</span>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- end .about-text -->
+
+  </div>
+  <!-- end .about-grid -->
 
 </section>
 
