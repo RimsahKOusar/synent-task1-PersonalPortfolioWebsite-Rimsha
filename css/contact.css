@@ -1,0 +1,100 @@
+/* ============================================================
+   contact.css
+   PURPOSE : Styles for the "Contact Me" section.
+             Displays contact information as a clean vertical
+             list of rows, each with an icon, label, and value.
+   ============================================================ */
+
+
+/* ── CONTACT SECTION BACKGROUND ────────────────────────────
+   Alternates to the surface color (like the About section)
+   to create visual rhythm when scrolling down the page.
+────────────────────────────────────────────────────────────── */
+#contact {
+  background: var(--surface);
+}
+
+
+/* ── CONTENT WIDTH LIMIT ────────────────────────────────────
+   Constrains the contact content to 600px so it doesn't
+   stretch uncomfortably wide on large screens.
+────────────────────────────────────────────────────────────── */
+.contact-wrapper {
+  max-width: 600px;
+}
+
+
+/* ── SECTION HEADING ────────────────────────────────────────
+   "Contact Me" main heading.
+────────────────────────────────────────────────────────────── */
+.contact-wrapper h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 0;
+}
+
+
+/* ── INTRO TEXT ─────────────────────────────────────────────
+   Short invitation text below the heading.
+────────────────────────────────────────────────────────────── */
+.contact-text {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+
+/* ── CONTACT ROW ────────────────────────────────────────────
+   Each contact method (email, phone, etc.) is one row.
+   Flexbox aligns the icon box and text side by side.
+   A bottom border separates rows like a list.
+────────────────────────────────────────────────────────────── */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+/* Remove border from the very last row */
+.contact-item:last-of-type {
+  border-bottom: none;
+}
+
+
+/* ── CONTACT ICON BOX ───────────────────────────────────────
+   A small square box containing the icon for each contact type.
+   flex-shrink: 0 prevents it from squishing on small screens.
+────────────────────────────────────────────────────────────── */
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--accent);
+  flex-shrink: 0;           /* never compress the icon box */
+}
+
+
+/* ── CONTACT LABEL ──────────────────────────────────────────
+   Small uppercase text above each value, e.g. "Email", "Phone".
+────────────────────────────────────────────────────────────── */
+.contact-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+
+/* ── CONTACT VALUE ──────────────────────────────────────────
+   The actual contact detail, e.g. "yourname@email.com".
+────────────────────────────────────────────────────────────── */
+.contact-value {
+  color: var(--text);
+}
