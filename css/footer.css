@@ -1,0 +1,21 @@
+/* ============================================================
+   footer.css
+   PURPOSE : Styles for the page footer.
+             A simple, minimal strip at the bottom with a
+             copyright notice and a top border separator.
+   ============================================================ */
+
+
+/* ── FOOTER WRAPPER ─────────────────────────────────────────
+   Centered text, small font, muted color.
+   A top border separates the footer from the last section.
+   Letter-spacing adds a refined, spaced-out look.
+────────────────────────────────────────────────────────────── */
+footer {
+  padding: 2rem var(--section-px);
+  text-align: center;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
