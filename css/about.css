@@ -1,0 +1,154 @@
+/* ============================================================
+   about.css
+   PURPOSE : Styles for the "About Me" section.
+             Uses a two-column grid layout — avatar/photo on
+             the left, text content on the right.
+   ============================================================ */
+
+
+/* ── ABOUT SECTION BACKGROUND ───────────────────────────────
+   The about section uses a slightly lighter background than
+   the hero to visually separate the two sections.
+────────────────────────────────────────────────────────────── */
+#about {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+
+/* ── TWO-COLUMN GRID ────────────────────────────────────────
+   Creates a side-by-side layout with two equal columns.
+   gap: 4rem adds space between the avatar and the text.
+   align-items: center vertically aligns both columns to the middle.
+────────────────────────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+
+/* ── AVATAR / PHOTO BOX ─────────────────────────────────────
+   A square bordered box to hold your photo.
+   aspect-ratio: 1 ensures it stays perfectly square regardless
+   of its width. The gold border gives it a premium frame look.
+────────────────────────────────────────────────────────────── */
+.about-avatar {
+  aspect-ratio: 1;
+  max-width: 340px;
+  border: 2px solid var(--accent);
+  position: relative;
+  overflow: hidden;     /* clips the inner decorative pseudo-element */
+}
+
+/* Decorative inner border — a visual inset effect using ::before */
+.about-avatar::before {
+  content: '';
+  position: absolute;
+  inset: 12px;          /* 12px away from all four edges */
+  border: 1px solid rgba(201, 168, 76, 0.25);  /* subtle transparent gold */
+  pointer-events: none; /* doesn't block clicks */
+}
+
+
+/* ── AVATAR PLACEHOLDER (before you add your photo) ─────────
+   Shows your initials centered inside the avatar box.
+   Replace this entire block with an <img> tag when you have
+   your actual photo ready.
+────────────────────────────────────────────────────────────── */
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Large initials inside the placeholder */
+.avatar-initials {
+  font-family: var(--font-head);
+  font-size: 4rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+
+/* ── ABOUT HEADING ──────────────────────────────────────────
+   The main "Crafting Digital Experiences" heading.
+   Uses clamp() for responsive font sizing.
+────────────────────────────────────────────────────────────── */
+.about-text h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+
+/* ── ABOUT PARAGRAPHS ───────────────────────────────────────
+   The bio/description paragraphs. Slightly muted so they
+   don't compete visually with the heading.
+────────────────────────────────────────────────────────────── */
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+
+/* ── STATS ROW ──────────────────────────────────────────────
+   Three quick-stat blocks (e.g. "3+ Projects") displayed in
+   a horizontal row below the bio text.
+   A top border visually separates stats from the paragraphs.
+────────────────────────────────────────────────────────────── */
+.about-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Each individual stat item */
+.stat-item {
+  text-align: center;
+}
+
+/* The large number (e.g. "3+") */
+.stat-number {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+/* The label below the number (e.g. "Projects") */
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+
+/* ── RESPONSIVE: MOBILE ─────────────────────────────────────
+   On small screens, switch from 2-column grid to single column
+   so the avatar stacks above the text instead of side-by-side.
+────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-avatar {
+    max-width: 220px;
+  }
+}
