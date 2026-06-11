@@ -1,0 +1,130 @@
+/* ============================================================
+   skills.css
+   PURPOSE : Styles for the "Skills" section.
+             Displays skill cards in a responsive grid. Each
+             card shows a skill name, description, and a
+             visual progress bar indicating proficiency level.
+   ============================================================ */
+
+
+/* ── SKILLS SECTION BORDER ──────────────────────────────────
+   Adds a subtle separator line below the skills section.
+────────────────────────────────────────────────────────────── */
+#skills {
+  border-bottom: 1px solid var(--border);
+}
+
+
+/* ── SECTION HEADING ────────────────────────────────────────
+   The "My Skills" main heading — inherits clamp-based font
+   sizing for responsive behavior.
+────────────────────────────────────────────────────────────── */
+#skills h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 0;
+}
+
+
+/* ── INTRO PARAGRAPH ────────────────────────────────────────
+   Short description text below the heading.
+   max-width limits line length for readability.
+────────────────────────────────────────────────────────────── */
+.skills-intro {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 3rem;
+}
+
+
+/* ── SKILLS CARD GRID ───────────────────────────────────────
+   auto-fill + minmax creates a responsive grid automatically:
+   - It fits as many 200px columns as possible per row
+   - Cards stretch to fill available space (1fr)
+   - No media queries needed — grid adjusts itself
+────────────────────────────────────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+
+/* ── INDIVIDUAL SKILL CARD ──────────────────────────────────
+   Each card has a dark surface background, a subtle border,
+   and lifts up slightly on hover for an interactive feel.
+────────────────────────────────────────────────────────────── */
+.skill-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+/* On hover: gold border + card lifts 4px upward */
+.skill-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+
+/* ── SKILL ICON ─────────────────────────────────────────────
+   The emoji or icon at the top of each card.
+────────────────────────────────────────────────────────────── */
+.skill-card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+
+/* ── SKILL NAME ─────────────────────────────────────────────
+   The technology name (e.g. "HTML5", "CSS3").
+────────────────────────────────────────────────────────────── */
+.skill-card h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+
+/* ── SKILL DESCRIPTION ──────────────────────────────────────
+   Short subtitle below the skill name (e.g. "Structure & Semantics").
+────────────────────────────────────────────────────────────── */
+.skill-card p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+
+/* ── PROGRESS BAR TRACK ─────────────────────────────────────
+   The grey "empty" background bar that represents 0–100%.
+────────────────────────────────────────────────────────────── */
+.skill-bar {
+  height: 3px;
+  background: var(--border);
+  margin-top: 0.75rem;
+}
+
+
+/* ── PROGRESS BAR FILL ──────────────────────────────────────
+   The gold "filled" portion. Width is set inline on each card
+   using a style attribute, e.g. style="width: 80%"
+────────────────────────────────────────────────────────────── */
+.skill-fill {
+  height: 100%;
+  background: var(--accent);
+}
+
+
+/* ── PERCENTAGE LABEL ───────────────────────────────────────
+   Small text showing the percentage below the bar.
+────────────────────────────────────────────────────────────── */
+.skill-percent {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
